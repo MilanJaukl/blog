@@ -1,0 +1,48 @@
+php 5.6.3v
+assets/img/nyse.jpg
+
+<?php
+    session_start();
+    $_SESSION['greeting'] = "HELLO STUDENTS";
+    
+
+    // COOKIES
+    // ukládáme data u uživatele
+    // superglobal $_COOKIE;
+    // setcookie('name', 'Milan', time()+ (60*60*24),'/', 'localhost', false, false );
+
+    // SESSION
+    // pro uložení většího množství informací 1, u uživatele se uloží COOKIE s referencí na SESSION, která je uložena na našem serveru
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php 
+        // if (isset($_POST['submit']))
+        // {
+        //     print_r( $_POST);
+        // }
+        // print_r($_COOKIE);
+        // jak si zapamatuju uživatele, který se přihlásil -> pozor na bezpečnost, může si uživatel vytvořit vlastní cookie soubor ?
+        if (isset($_COOKIE)) {
+            echo $_COOKIE['name'];
+        }
+        
+    ?>
+    <!-- <form action="" method="post">
+        <input type="text" name="name" id="">
+        <input type="submit" name="submit" value="Odeslat">
+    </form> -->
+    
+</body>
+</html>

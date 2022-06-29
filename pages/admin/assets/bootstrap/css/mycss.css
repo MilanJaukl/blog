@@ -1,0 +1,23 @@
+#mytable tbody tr:hover
+{
+    background-color: red;
+}
+
+.dot 
+{
+    height: 15px;
+    width: 15px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-online 
+{
+    background-color: green;
+}
+
+.dot-offline 
+{
+    background-color: red;
+}
