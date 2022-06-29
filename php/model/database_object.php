@@ -59,7 +59,6 @@ class Database_object
         }
         $query = substr($query, 0, -1);
         $query .= " LIMIT $limitStart, $limitEnd";
-        echo $query;
         $result = Database::get_result_from_query($query);
         $data = [];
         while ($row = mysqli_fetch_assoc($result))
@@ -208,7 +207,6 @@ class Database_object
     {
         $class = strtolower(static::class);
         $query = "UPDATE $class SET $column = $value WHERE id = {$this->data['id']}";
-        echo $query;
     }
 
     public function isDeleted () 
