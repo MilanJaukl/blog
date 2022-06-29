@@ -3,7 +3,7 @@
 <?php include_once 'functions.php';?>
 <?php
     $userLog;
-    if (isset($_SESSION['user'])) 
+    if (isset($_SESSION['user']))   
     {
         $userLog = unserialize($_SESSION['user']);
         if ($userLog->data['role'] != User::ROLE_ADMIN) 
